@@ -40,7 +40,7 @@
 
         <!-- header end---------------------------------->
 
-        <main class="mt-5 pl-6 lg:mt-10 w-11/12 mx-auto gap-10 flex">
+        <main class="mt-5 pl-6 flex lg:flex mt-10 w-11/12 mx-auto gap-10">
             <section>
                 <div class="text-3xl font-bold">Kitchenware</div>
                 <section
@@ -81,7 +81,9 @@
 
                             <h2 class="card-title">K. Accessories</h2>
 
-                            <div class="card-actions">39.00 TK</div>
+                            <div class="card-actions">
+                                <span id="item-element-price">39.00</span> TK
+                            </div>
                         </div>
                     </div>
                     <!-- 2nd card----------------------------------------------- -->
@@ -120,7 +122,9 @@
 
                             <h2 class="card-title">K. Accessories</h2>
 
-                            <div class="card-actions">25.00 TK</div>
+                            <div class="card-actions">
+                                <span id="item-element-price">25.00</span> TK
+                            </div>
                         </div>
                     </div>
                     <!-- 3rd card----------------------------------------------- -->
@@ -159,7 +163,9 @@
 
                             <h2 class="card-title">Home Cooker</h2>
 
-                            <div class="card-actions">49.00 TK</div>
+                            <div class="card-actions">
+                                <span id="item-element-price">49.00 </span>TK
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -205,7 +211,10 @@
 
                                 <h2 class="card-title">Sports Back Cap</h2>
 
-                                <div class="card-actions">49.00 TK</div>
+                                <div class="card-actions">
+                                    <span id="item-element-price">49.00</span>
+                                    TK
+                                </div>
                             </div>
                         </div>
                         <!-- 2nd card----------------------------------------------- -->
@@ -244,7 +253,10 @@
 
                                 <h2 class="card-title">Full Jersey Set</h2>
 
-                                <div class="card-actions">69.00 TK</div>
+                                <div class="card-actions">
+                                    <span id="item-element-price">69.00</span>
+                                    TK
+                                </div>
                             </div>
                         </div>
                         <!-- 3rd card----------------------------------------------- -->
@@ -283,7 +295,10 @@
 
                                 <h2 class="card-title">Sports cates</h2>
 
-                                <div class="card-actions">159.00 TK</div>
+                                <div class="card-actions">
+                                    <span id="item-element-price">159.00</span>
+                                    TK
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -298,18 +313,20 @@
                         class="w-36"
                         type="text"
                         name=""
-                        id=""
+                        id="copun-field"
                         placeholder="Coupon code" />
 
-                    <button class="btn btn-secondary">Apply</button>
+                    <button id="cupon-btn" class="btn btn-secondary">
+                        Apply
+                    </button>
                 </div>
-                <div></div>
+                <div id="adding-card-name"></div>
                 <div class="mt-5 bg-[#fcf1f1]">
-                    <h1>Total price:</h1>
-                    <h1>Discount:</h1>
-                    <h1>Total:</h1>
+                    <h1 id="item-total-price">Total price:</h1>
+                    <h1 class="item-discount">Discount:</h1>
+                    <h1 class="all-total-ammount">Total:</h1>
                 </div>
-                <button class="btn btn-secondary w-full mt-5">
+                <button id="Purchase-btn" class="btn btn-secondary w-full mt-5">
                     Make Purchase
                 </button>
             </section>
