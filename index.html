@@ -16,7 +16,7 @@
         <header
             class="bg-amber-100 flex flex-col-reverse lg:flex-row justify-center items-center gap-12 mt-2 p-4 lg:p-8">
             <div class="text-center lg:text-left">
-                <h1 class="font-bold">---SALE FEVER---</h1>
+                <h1 class="font-bold flex justify-center">---SALE FEVER---</h1>
                 <h1 class="lg:text-4xl font-bold mt-5">
                     Purchase TK 200 or <br />
                     above & get <span class="text-pink-500">20% off</span>
@@ -25,7 +25,10 @@
                     class="flex flex-col lg:flex-row items-center gap-3 mt-5 justify-center">
                     <h6 class="lg:font-semibold">Use Promo Code</h6>
                     <div>
-                        <button class="btn btn-primary">SELL200</button>
+                        <h1
+                            class="text-2xl font-semibold bg-pink-400 rounded-sm">
+                            SELL200
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -33,18 +36,18 @@
             <div class="text-center lg:text-right">
                 <img
                     class="w-48 lg:w-96 mt-5 lg:mt-0"
-                    src="images/Summer 1.png"
+                    src="./images/Summer 1.png"
                     alt="" />
             </div>
         </header>
 
         <!-- header end---------------------------------->
 
-        <main class="mt-5 pl-6 flex lg:flex mt-10 w-11/12 mx-auto gap-10">
+        <main class="md: pl-6 lg: flex mt-10 w-11/12 mx-auto gap-10">
             <section>
                 <div class="text-3xl font-bold">Kitchenware</div>
                 <section
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5">
+                    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 mt-10 gap-5">
                     <!-- 1st card------------------------------------------------->
 
                     <div class="card w-72 bg-gray-100">
@@ -82,7 +85,8 @@
                             <h2 class="card-title">K. Accessories</h2>
 
                             <div class="card-actions">
-                                <span id="item-element-price">39.00</span> TK
+                                <span id="item-element-price">39.00</span>
+                                TK
                             </div>
                         </div>
                     </div>
@@ -120,10 +124,11 @@
                                     class="mask mask-star-2 bg-orange-400" />
                             </div>
 
-                            <h2 class="card-title">K. Accessories</h2>
+                            <h2 class="card-title">Chef's Knife</h2>
 
                             <div class="card-actions">
-                                <span id="item-element-price">25.00</span> TK
+                                <span id="item-element-price">25.00</span>
+                                TK
                             </div>
                         </div>
                     </div>
@@ -305,32 +310,63 @@
                 </section>
             </section>
 
-            <!-- calculate section------------------------------------------------->
-            <section class="w-72 mt-44 h-auto">
-                <div class="bg-[#FFFFFF]">
-                    <h1 class="text-xl font-bold">Have coupon?</h1>
-                    <input
-                        class="w-36"
-                        type="text"
-                        name=""
-                        id="copun-field"
-                        placeholder="Coupon code" />
+            <section>
+                <!-- calculate section------------------------------------------------->
+                <section id="calculate-container" class="w-72 mt-44 h-auto">
+                    <div class="bg-[#FFFFFF]">
+                        <h1 class="text-xl font-bold">Have coupon?</h1>
+                        <input
+                            class="w-36"
+                            type="text"
+                            name=""
+                            id="copun-field"
+                            placeholder="Coupon code" />
 
-                    <button id="cupon-btn" class="btn btn-secondary">
-                        Apply
-                    </button>
-                </div>
-                <div id="adding-card-name"></div>
-                <div class="mt-5 bg-[#fcf1f1]">
-                    <h1 id="item-total-price">Total price:</h1>
-                    <h1 class="item-discount">Discount:</h1>
-                    <h1 class="all-total-ammount">Total:</h1>
-                </div>
-                <button id="Purchase-btn" class="btn btn-secondary w-full mt-5">
-                    Make Purchase
-                </button>
+                        <button id="cupon-btn" class="btn btn-secondary">
+                            Apply
+                        </button>
+                    </div>
+                    <div id="adding-card-name"></div>
+                    <div class="mt-5 bg-[#fcf1f1]">
+                        <h1 id="item-total-price">Total price:</h1>
+                        <h1 class="item-discount">Discount:</h1>
+                        <h1 class="all-total-ammount">Total:</h1>
+                    </div>
+
+                    <!--modal on daisy ui------------------------>
+
+                    <div>
+                        <button
+                            id="Purchase-btn"
+                            class="btn bg pink btn btn-secondary w-full mt-5"
+                            onclick="my_modal_1.showModal()">
+                            Make Purchase
+                        </button>
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <div class="flex justify-center">
+                                    <img
+                                        class=""
+                                        src="./images/congo.png"
+                                        alt="" />
+                                </div>
+                                <h1
+                                    class="text-4xl font-bold flex justify-center">
+                                    Congratulations
+                                </h1>
+                                <h1 class="flex justify-center mt-5 font-bold">
+                                    You have purchased the product
+                                </h1>
+                                <div
+                                    class="btn btn-secondary flex justify-center w-60 mx-auto mt-5">
+                                    <button id="Home-btn">Go To Home</button>
+                                </div>
+                            </form>
+                        </dialog>
+                    </div>
+                </section>
             </section>
         </main>
+        <script src="js/index.js"></script>
     </body>
-    <script src="js/index.js"></script>
 </html>
